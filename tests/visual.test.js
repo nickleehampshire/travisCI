@@ -37,7 +37,7 @@ async function UITest(){
                 const apiKey = process.env.APPLITOOLS_API_KEY;
 
                 eyes.setApiKey(apiKey);
-                await eyes.open(driver, "Jest,Travis,React", "initial test" ); //driver, app name, test name
+                await eyes.open(driver, "Travisci Integration", "initial test" ); //driver, app name, test name
                 await driver.get("file:///Users/nicklee/Documents/nickleehampshire/applitoolsCI/build/index.html")      
 
 
