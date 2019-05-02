@@ -32,6 +32,7 @@ async function UITest(){
                 chrome_options.addArguments('--disable-dev-shm-usage')
                 driver = new webdriver.Builder()
                     .withCapabilities(webdriver.Capabilities.chrome())
+                    .setChromeOptions(chrome_options)
                     .build()
                 eyes = new Eyes();
                 const apiKey = process.env.APPLITOOLS_API_KEY;
