@@ -39,7 +39,8 @@ async function UITest(){
 
                 eyes.setApiKey(apiKey);
                 await eyes.open(driver, "Travisci Integration", "initial test" ); //driver, app name, test name
-                await driver.get("file:///Users/nicklee/Documents/nickleehampshire/applitoolsCI/build/index.html")      
+                await driver.get("http://localhost:9000/")
+                //await driver.get("file:///Users/nicklee/Documents/nickleehampshire/applitoolsCI/build/index.html")      
 
 
             } catch(err){
