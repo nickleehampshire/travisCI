@@ -67,5 +67,4 @@ async function UITest(){
 }
 
 UITest()
-
 console.log(process.env.APPLITOOLS_API_KEY)
