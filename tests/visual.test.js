@@ -36,8 +36,12 @@ async function UITest(){
                     .build()
                 eyes = new Eyes();
                 const apiKey = process.env.APPLITOOLS_API_KEY;
+                const batchName = null; 
+                const batchID = process.env.APPPLITOOLS_BATCH_ID;
 
                 eyes.setApiKey(apiKey);
+                eyes.setBatch(null,batchID)
+
                 await eyes.open(driver, "Travisci Integration", "initial test" ); //driver, app name, test name
                 await driver.get("http://localhost:9000/")
                 //await driver.get("file:///Users/nicklee/Documents/nickleehampshire/applitoolsCI/build/index.html")      
