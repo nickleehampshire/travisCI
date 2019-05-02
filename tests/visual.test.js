@@ -39,6 +39,7 @@ async function UITest(){
                 const batchName = null; 
                 const batchID = process.env.APPPLITOOLS_BATCH_ID;
 
+                console.log("this is the batchID: ", batchID)
                 eyes.setApiKey(apiKey);
                 eyes.setBatch(null,batchID)
 
