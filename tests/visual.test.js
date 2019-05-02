@@ -58,7 +58,7 @@ async function UITest(){
         it("look the same", async () => {
             const result = await eyes.checkWindow("first check").then(function(result){console.log('data:',result); return result});
     
-            const isItTheSame = result.MatchResult._asExpected;
+            const isItTheSame = result._asExpected;
             expect(isItTheSame).toBeTruthy();
     
         })
