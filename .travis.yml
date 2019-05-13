@@ -9,7 +9,7 @@ addons:
   chrome: stable
 
 before_script:
-  - export APPLITOOLS_BATCH_ID= ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}
+  - export APPLITOOLS_BATCH_ID= `${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
   - npm install 
   - npm run start &
 script:
