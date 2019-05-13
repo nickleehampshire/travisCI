@@ -73,5 +73,7 @@ async function UITest(){
     })
 }
 
-UITest()
+//UITest()
 console.log(process.env.APPLITOOLS_API_KEY)
+console.log(APPLITOOLS_BATCH_ID)
+

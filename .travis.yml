@@ -1,11 +1,15 @@
 language: node_js
 node_js:
   - "8"
+env:
+  global:
+  - APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
+
 addons:
   chrome: stable
 
 before_script:
-  - export APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
+  - export APPLITOOLS_BATCH_ID= `${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
   - npm install 
   - npm run start &
 script:
